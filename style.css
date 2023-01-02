@@ -1,0 +1,67 @@
+#tapete {
+    background-color: green;
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+#baraja {
+  background-image: url('mazo.png'); 
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+ 
+  background-size: cover;
+}
+
+#cardGrid {
+  position: absolute;
+  top: 10px;
+  left: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw; /* Establece un ancho adecuado para el contenedor de las cartas */
+}
+
+.card {
+  /* Ajusta el ancho de cada carta al 20% del ancho de la ventana */
+  margin-left: 15px;
+  background-size: cover;
+ 
+}
+
+/* Ajusta el tamaño de las cartas en dispositivos móviles */
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 50px;
+    height: 70px;
+    font-size: 10px;
+  }
+}
+
+/* Ajusta el tamaño de las cartas en tablets */
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .card {
+    width: 80px;
+    height: 170px;
+    font-size: 14px;
+  }
+}
+
+/* Ajusta el ancho del contenedor de las cartas en tablets y dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  #cardGrid {
+    width: 90%;
+  }
+}
+img {
+  width: auto;
+  height: auto;
+  margin-bottom: 5px;
+  
+}
